@@ -7,9 +7,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage extends PageLocatorsLogin {
-    LoginPage loginPage;
-    public LoginPage(LoginPage loginPage ) {
-         loginPage  = this.loginPage;
+    LoginPage loginPage ;
+    
+    
+    
+    public void init(LoginPage loginPage)
+    {
+    	this.loginPage = loginPage;
     }
 
     public  WebElement username(WebDriver driver) {

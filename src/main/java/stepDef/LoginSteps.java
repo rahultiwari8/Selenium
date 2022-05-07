@@ -11,9 +11,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LoginSteps {
     WebDriver   driver;
-    LoginPage   loginPage;
+    LoginPage   loginPage = new LoginPage();
     @Given("I am on the login page")
     public void i_am_on_the_login_page() {
+    	loginPage.init(loginPage);
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
